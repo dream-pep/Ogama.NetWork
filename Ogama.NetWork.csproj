@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <Title>Ogama.NetWork</Title>
+    <Description>A comprehensive Minecraft component library for .NET 8, providing game installation, authentication, and networking features.</Description>
+    <Authors>Ogama</Authors>
+    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+    <Version>0.1.0</Version>
+    <PackageProjectUrl>https://github.com/dream-pep/ogama.network</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dream-pep/ogama.network.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>minecraft;gaming;installation;authentication;networking</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="System.Reactive" Version="6.0.0" />
+    <PackageReference Include="ZeroTier.Sockets" Version="1.8.4" />
+  </ItemGroup>
+
+</Project>
