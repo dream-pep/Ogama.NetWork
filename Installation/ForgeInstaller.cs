@@ -177,7 +177,10 @@ namespace Ogama.NetWork.Installation
                 }
 
                 // 清理安装文件
-                File.Delete(installerPath);
+                if (installerPath != null)
+                {
+                    File.Delete(installerPath);
+                }
 
                 return new InstallationResult
                 {

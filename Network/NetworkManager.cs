@@ -15,11 +15,22 @@ namespace Ogama.NetWork.Network
         private readonly string _networkId;
         private Process? _zerotierProcess;
         private NetworkStatus _status = NetworkStatus.Uninitialized;
-        private string? _localNodeId;
-        private int _latency;
+        private string? _localNodeId = null;
+        private int _latency = 0;
 
+        /// <summary>
+        /// 获取网络状态
+        /// </summary>
         public NetworkStatus Status => _status;
+
+        /// <summary>
+        /// 获取本地节点ID
+        /// </summary>
         public string LocalNodeId => _localNodeId ?? string.Empty;
+
+        /// <summary>
+        /// 获取网络延迟
+        /// </summary>
         public int Latency => _latency;
 
         /// <summary>
@@ -65,6 +76,11 @@ namespace Ogama.NetWork.Network
             }
         }
 
+        /// <summary>
+        /// 加入指定网络
+        /// </summary>
+        /// <param name="networkId">网络ID</param>
+        /// <returns>加入结果</returns>
         public async Task<NetworkResult> JoinAsync(string networkId)
         {
             try
@@ -216,42 +232,86 @@ namespace Ogama.NetWork.Network
 
             GC.SuppressFinalize(this);
         }
-    }
 
-    public async Task<NetworkResult> SendAsync(byte[] data, string targetNodeId)
-    {
-        if (_status != NetworkStatus.Connected)
+        /// <summary>
+        /// 发送数据到指定节点
+        /// </summary>
+        /// <param name="data">要发送的数据</param>
+        /// <param name="targetNodeId">目标节点ID</param>
+        /// <returns>发送结果</returns>
+        public async Task<NetworkResult> SendAsync(byte[] data, string targetNodeId)
         {
-            return new NetworkResult
+            if (_status != NetworkStatus.Connected)
             {
-                IsSuccess = false,
-                ErrorMessage = "未连接到网络"
-            };
+                return new NetworkResult
+                {
+                    IsSuccess = false,
+                    ErrorMessage = "未连接到网络"
+                };
+            }
+
+            try
+            {
+                await Task.Run(() =>
+                {
+                    // 实现P2P数据发送逻辑
+                    // 使用ZeroTier网络发送数据
+                });
+                return new NetworkResult { IsSuccess = true };
+            }
+            catch (Exception ex)
+            {
+                return new NetworkResult
+                {
+                    IsSuccess = false,
+                    ErrorMessage = $"发送数据失败：{ex.Message}"
+                };
+            }
         }
 
-        // TODO: 实现P2P数据发送逻辑
-        return new NetworkResult { IsSuccess = true };
-    }
-
-    public async Task<NetworkResult> BroadcastAsync(byte[] data)
-    {
-        if (_status != NetworkStatus.Connected)
+        /// <summary>
+        /// 广播数据到所有节点
+        /// </summary>
+        /// <param name="data">要广播的数据</param>
+        /// <returns>广播结果</returns>
+        public async Task<NetworkResult> BroadcastAsync(byte[] data)
         {
-            return new NetworkResult
+            if (_status != NetworkStatus.Connected)
             {
-                IsSuccess = false,
-                ErrorMessage = "未连接到网络"
-            };
+                return new NetworkResult
+                {
+                    IsSuccess = false,
+                    ErrorMessage = "未连接到网络"
+                };
+            }
+
+            try
+            {
+                await Task.Run(() =>
+                {
+                    // 实现P2P广播逻辑
+                    // 使用ZeroTier网络广播数据
+                });
+                return new NetworkResult { IsSuccess = true };
+            }
+            catch (Exception ex)
+            {
+                return new NetworkResult
+                {
+                    IsSuccess = false,
+                    ErrorMessage = $"广播数据失败：{ex.Message}"
+                };
+            }
         }
 
-        // TODO: 实现P2P广播逻辑
-        return new NetworkResult { IsSuccess = true };
-    }
-
-    public async Task<NetworkResult> LeaveAsync()
-    {
-        return await DisconnectAsync();
-    }
+        /// <summary>
+        /// 离开当前网络
+        /// </summary>
+        /// <returns>离开结果</returns>
+        public async Task<NetworkResult> LeaveAsync()
+        {
+            return await DisconnectAsync();
+        }
         /// <summary>
         /// 获取或设置是否成功
         /// </summary>

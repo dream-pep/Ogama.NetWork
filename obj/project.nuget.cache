@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "cwZicsoFglg=",
+  "success": true,
+  "projectFilePath": "E:\\dream_pep\\Documents\\Ogama.NetWork\\Ogama.NetWork.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dream_pep\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\dream_pep\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\dream_pep\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0\\microsoft.extensions.logging.8.0.0.nupkg.sha512",
+    "C:\\Users\\dream_pep\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\dream_pep\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "C:\\Users\\dream_pep\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\dream_pep\\.nuget\\packages\\system.reactive\\6.0.0\\system.reactive.6.0.0.nupkg.sha512",
+    "C:\\Users\\dream_pep\\.nuget\\packages\\zerotier.sockets\\1.8.4\\zerotier.sockets.1.8.4.nupkg.sha512"
+  ],
+  "logs": []
+}

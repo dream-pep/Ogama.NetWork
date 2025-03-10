@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\dream_pep\.nuget\packages\;C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.10.0</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="C:\Users\dream_pep\.nuget\packages\" />
+    <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Language)' == 'C#' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <None Include="$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\AddressInfo.cs" Condition="Exists('$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\AddressInfo.cs')">
+      <NuGetPackageId>ZeroTier.Sockets</NuGetPackageId>
+      <NuGetPackageVersion>1.8.4</NuGetPackageVersion>
+      <NuGetItemType>None</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>ZeroTier.Source.ReadOnly\AddressInfo.cs</TargetPath>
+      <DestinationSubDirectory>ZeroTier.Source.ReadOnly\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>ZeroTier.Source.ReadOnly\AddressInfo.cs</Link>
+    </None>
+    <None Include="$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\Constants.cs" Condition="Exists('$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\Constants.cs')">
+      <NuGetPackageId>ZeroTier.Sockets</NuGetPackageId>
+      <NuGetPackageVersion>1.8.4</NuGetPackageVersion>
+      <NuGetItemType>None</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>ZeroTier.Source.ReadOnly\Constants.cs</TargetPath>
+      <DestinationSubDirectory>ZeroTier.Source.ReadOnly\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>ZeroTier.Source.ReadOnly\Constants.cs</Link>
+    </None>
+    <None Include="$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\Event.cs" Condition="Exists('$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\Event.cs')">
+      <NuGetPackageId>ZeroTier.Sockets</NuGetPackageId>
+      <NuGetPackageVersion>1.8.4</NuGetPackageVersion>
+      <NuGetItemType>None</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>ZeroTier.Source.ReadOnly\Event.cs</TargetPath>
+      <DestinationSubDirectory>ZeroTier.Source.ReadOnly\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>ZeroTier.Source.ReadOnly\Event.cs</Link>
+    </None>
+    <None Include="$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\MulticastInfo.cs" Condition="Exists('$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\MulticastInfo.cs')">
+      <NuGetPackageId>ZeroTier.Sockets</NuGetPackageId>
+      <NuGetPackageVersion>1.8.4</NuGetPackageVersion>
+      <NuGetItemType>None</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>ZeroTier.Source.ReadOnly\MulticastInfo.cs</TargetPath>
+      <DestinationSubDirectory>ZeroTier.Source.ReadOnly\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>ZeroTier.Source.ReadOnly\MulticastInfo.cs</Link>
+    </None>
+    <None Include="$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\NetworkInfo.cs" Condition="Exists('$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\NetworkInfo.cs')">
+      <NuGetPackageId>ZeroTier.Sockets</NuGetPackageId>
+      <NuGetPackageVersion>1.8.4</NuGetPackageVersion>
+      <NuGetItemType>None</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>ZeroTier.Source.ReadOnly\NetworkInfo.cs</TargetPath>
+      <DestinationSubDirectory>ZeroTier.Source.ReadOnly\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>ZeroTier.Source.ReadOnly\NetworkInfo.cs</Link>
+    </None>
+    <None Include="$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\NetworkStream.cs" Condition="Exists('$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\NetworkStream.cs')">
+      <NuGetPackageId>ZeroTier.Sockets</NuGetPackageId>
+      <NuGetPackageVersion>1.8.4</NuGetPackageVersion>
+      <NuGetItemType>None</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>ZeroTier.Source.ReadOnly\NetworkStream.cs</TargetPath>
+      <DestinationSubDirectory>ZeroTier.Source.ReadOnly\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>ZeroTier.Source.ReadOnly\NetworkStream.cs</Link>
+    </None>
+    <None Include="$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\Node.cs" Condition="Exists('$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\Node.cs')">
+      <NuGetPackageId>ZeroTier.Sockets</NuGetPackageId>
+      <NuGetPackageVersion>1.8.4</NuGetPackageVersion>
+      <NuGetItemType>None</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>ZeroTier.Source.ReadOnly\Node.cs</TargetPath>
+      <DestinationSubDirectory>ZeroTier.Source.ReadOnly\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>ZeroTier.Source.ReadOnly\Node.cs</Link>
+    </None>
+    <None Include="$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\NodeInfo.cs" Condition="Exists('$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\NodeInfo.cs')">
+      <NuGetPackageId>ZeroTier.Sockets</NuGetPackageId>
+      <NuGetPackageVersion>1.8.4</NuGetPackageVersion>
+      <NuGetItemType>None</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>ZeroTier.Source.ReadOnly\NodeInfo.cs</TargetPath>
+      <DestinationSubDirectory>ZeroTier.Source.ReadOnly\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>ZeroTier.Source.ReadOnly\NodeInfo.cs</Link>
+    </None>
+    <None Include="$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\PeerInfo.cs" Condition="Exists('$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\PeerInfo.cs')">
+      <NuGetPackageId>ZeroTier.Sockets</NuGetPackageId>
+      <NuGetPackageVersion>1.8.4</NuGetPackageVersion>
+      <NuGetItemType>None</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>ZeroTier.Source.ReadOnly\PeerInfo.cs</TargetPath>
+      <DestinationSubDirectory>ZeroTier.Source.ReadOnly\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>ZeroTier.Source.ReadOnly\PeerInfo.cs</Link>
+    </None>
+    <None Include="$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\RouteInfo.cs" Condition="Exists('$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\RouteInfo.cs')">
+      <NuGetPackageId>ZeroTier.Sockets</NuGetPackageId>
+      <NuGetPackageVersion>1.8.4</NuGetPackageVersion>
+      <NuGetItemType>None</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>ZeroTier.Source.ReadOnly\RouteInfo.cs</TargetPath>
+      <DestinationSubDirectory>ZeroTier.Source.ReadOnly\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>ZeroTier.Source.ReadOnly\RouteInfo.cs</Link>
+    </None>
+    <None Include="$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\Socket.cs" Condition="Exists('$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\Socket.cs')">
+      <NuGetPackageId>ZeroTier.Sockets</NuGetPackageId>
+      <NuGetPackageVersion>1.8.4</NuGetPackageVersion>
+      <NuGetItemType>None</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>ZeroTier.Source.ReadOnly\Socket.cs</TargetPath>
+      <DestinationSubDirectory>ZeroTier.Source.ReadOnly\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>ZeroTier.Source.ReadOnly\Socket.cs</Link>
+    </None>
+    <None Include="$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\SocketException.cs" Condition="Exists('$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\SocketException.cs')">
+      <NuGetPackageId>ZeroTier.Sockets</NuGetPackageId>
+      <NuGetPackageVersion>1.8.4</NuGetPackageVersion>
+      <NuGetItemType>None</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>ZeroTier.Source.ReadOnly\SocketException.cs</TargetPath>
+      <DestinationSubDirectory>ZeroTier.Source.ReadOnly\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>ZeroTier.Source.ReadOnly\SocketException.cs</Link>
+    </None>
+    <None Include="$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\example.cs" Condition="Exists('$(NuGetPackageRoot)zerotier.sockets\1.8.4\contentFiles\cs\any\ZeroTier.Source.ReadOnly\example.cs')">
+      <NuGetPackageId>ZeroTier.Sockets</NuGetPackageId>
+      <NuGetPackageVersion>1.8.4</NuGetPackageVersion>
+      <NuGetItemType>None</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>ZeroTier.Source.ReadOnly\example.cs</TargetPath>
+      <DestinationSubDirectory>ZeroTier.Source.ReadOnly\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>ZeroTier.Source.ReadOnly\example.cs</Link>
+    </None>
+  </ItemGroup>
+</Project>

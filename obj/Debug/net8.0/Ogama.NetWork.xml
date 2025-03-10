@@ -1,0 +1,837 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ogama.NetWork</name>
+    </assembly>
+    <members>
+        <member name="T:Ogama.NetWork.Authentication.ExternalAuthenticator">
+            <summary>
+            外置账户验证器实现
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Authentication.ExternalAuthenticator.#ctor(System.String,System.String,System.String)">
+            <summary>
+            初始化外置账户验证器
+            </summary>
+            <param name="serverUrl">验证服务器URL</param>
+            <param name="username">用户名</param>
+            <param name="password">密码</param>
+        </member>
+        <member name="M:Ogama.NetWork.Authentication.ExternalAuthenticator.AuthenticateAsync">
+            <summary>
+            验证外置账户
+            </summary>
+            <returns>验证结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Authentication.ExternalAuthenticator.RefreshAsync">
+            <summary>
+            刷新外置账户凭据
+            </summary>
+            <returns>刷新结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Authentication.ExternalAuthenticator.ValidateAsync">
+            <summary>
+            验证外置账户凭据是否有效
+            </summary>
+            <returns>是否有效</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Authentication.ExternalAuthenticator.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:Ogama.NetWork.Authentication.IAuthenticator">
+            <summary>
+            定义Minecraft账户验证器的基础接口
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Authentication.IAuthenticator.AuthenticateAsync">
+            <summary>
+            验证账户凭据
+            </summary>
+            <returns>验证结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Authentication.IAuthenticator.RefreshAsync">
+            <summary>
+            刷新账户凭据
+            </summary>
+            <returns>刷新结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Authentication.IAuthenticator.ValidateAsync">
+            <summary>
+            验证账户凭据是否有效
+            </summary>
+            <returns>是否有效</returns>
+        </member>
+        <member name="T:Ogama.NetWork.Authentication.AuthenticationResult">
+            <summary>
+            验证结果类
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Authentication.AuthenticationResult.IsSuccess">
+            <summary>
+            获取或设置是否验证成功
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Authentication.AuthenticationResult.AccessToken">
+            <summary>
+            获取或设置访问令牌
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Authentication.AuthenticationResult.Username">
+            <summary>
+            获取或设置用户名
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Authentication.AuthenticationResult.Uuid">
+            <summary>
+            获取或设置UUID
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Authentication.AuthenticationResult.ErrorMessage">
+            <summary>
+            获取或设置错误信息
+            </summary>
+        </member>
+        <member name="T:Ogama.NetWork.Authentication.MicrosoftAuthenticator">
+            <summary>
+            微软账户验证器实现
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Authentication.MicrosoftAuthenticator.#ctor(System.String,System.String)">
+            <summary>
+            初始化微软账户验证器
+            </summary>
+            <param name="clientId">应用程序客户端ID</param>
+            <param name="clientSecret">应用程序客户端密钥</param>
+        </member>
+        <member name="M:Ogama.NetWork.Authentication.MicrosoftAuthenticator.AuthenticateAsync">
+            <summary>
+            验证微软账户
+            </summary>
+            <returns>验证结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Authentication.MicrosoftAuthenticator.RefreshAsync">
+            <summary>
+            刷新微软账户凭据
+            </summary>
+            <returns>刷新结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Authentication.MicrosoftAuthenticator.ValidateAsync">
+            <summary>
+            验证微软账户凭据是否有效
+            </summary>
+            <returns>是否有效</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Authentication.MicrosoftAuthenticator.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:Ogama.NetWork.Authentication.OfflineAuthenticator">
+            <summary>
+            离线账户验证器实现
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Authentication.OfflineAuthenticator.#ctor(System.String)">
+            <summary>
+            初始化离线账户验证器
+            </summary>
+            <param name="username">用户名</param>
+        </member>
+        <member name="M:Ogama.NetWork.Authentication.OfflineAuthenticator.AuthenticateAsync">
+            <summary>
+            验证离线账户
+            </summary>
+            <returns>验证结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Authentication.OfflineAuthenticator.RefreshAsync">
+            <summary>
+            刷新离线账户凭据（离线模式下始终返回成功）
+            </summary>
+            <returns>刷新结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Authentication.OfflineAuthenticator.ValidateAsync">
+            <summary>
+            验证离线账户凭据是否有效（离线模式下始终返回true）
+            </summary>
+            <returns>是否有效</returns>
+        </member>
+        <member name="T:Ogama.NetWork.Installation.FabricInstaller">
+            <summary>
+            Fabric安装器实现
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.FabricInstaller.#ctor(System.String,System.String,System.String)">
+            <summary>
+            初始化Fabric安装器
+            </summary>
+            <param name="gameVersion">游戏版本</param>
+            <param name="fabricVersion">Fabric版本</param>
+            <param name="installPath">安装路径</param>
+        </member>
+        <member name="P:Ogama.NetWork.Installation.FabricInstaller.Name">
+            <summary>
+            获取安装器名称
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Installation.FabricInstaller.GameVersion">
+            <summary>
+            获取游戏版本
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Installation.FabricInstaller.Progress">
+            <summary>
+            获取安装进度
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.FabricInstaller.ValidateEnvironmentAsync">
+            <summary>
+            验证安装环境
+            </summary>
+            <returns>验证结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.FabricInstaller.DownloadFilesAsync">
+            <summary>
+            下载所需文件
+            </summary>
+            <returns>下载结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.FabricInstaller.InstallAsync">
+            <summary>
+            安装游戏
+            </summary>
+            <returns>安装结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.FabricInstaller.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:Ogama.NetWork.Installation.ForgeInstaller">
+            <summary>
+            Forge安装器实现
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.ForgeInstaller.#ctor(System.String,System.String,System.String)">
+            <summary>
+            初始化Forge安装器
+            </summary>
+            <param name="gameVersion">游戏版本</param>
+            <param name="forgeVersion">Forge版本</param>
+            <param name="installPath">安装路径</param>
+        </member>
+        <member name="P:Ogama.NetWork.Installation.ForgeInstaller.Name">
+            <summary>
+            获取安装器名称
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Installation.ForgeInstaller.GameVersion">
+            <summary>
+            获取游戏版本
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Installation.ForgeInstaller.Progress">
+            <summary>
+            获取安装进度
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.ForgeInstaller.ValidateEnvironmentAsync">
+            <summary>
+            验证安装环境
+            </summary>
+            <returns>验证结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.ForgeInstaller.DownloadFilesAsync">
+            <summary>
+            下载所需文件
+            </summary>
+            <returns>下载结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.ForgeInstaller.InstallAsync">
+            <summary>
+            安装游戏
+            </summary>
+            <returns>安装结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.ForgeInstaller.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:Ogama.NetWork.Installation.IInstaller">
+            <summary>
+            定义Minecraft游戏安装器的基础接口
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Installation.IInstaller.Name">
+            <summary>
+            获取安装器名称
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Installation.IInstaller.GameVersion">
+            <summary>
+            获取游戏版本
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Installation.IInstaller.Progress">
+            <summary>
+            获取安装进度
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.IInstaller.ValidateEnvironmentAsync">
+            <summary>
+            验证安装环境
+            </summary>
+            <returns>验证结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.IInstaller.DownloadFilesAsync">
+            <summary>
+            下载所需文件
+            </summary>
+            <returns>下载结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.IInstaller.InstallAsync">
+            <summary>
+            安装游戏
+            </summary>
+            <returns>安装结果</returns>
+        </member>
+        <member name="T:Ogama.NetWork.Installation.InstallationResult">
+            <summary>
+            安装结果类
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Installation.InstallationResult.IsSuccess">
+            <summary>
+            获取或设置是否成功
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Installation.InstallationResult.ErrorMessage">
+            <summary>
+            获取或设置错误信息
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Installation.InstallationResult.InstallationPath">
+            <summary>
+            获取或设置安装路径
+            </summary>
+        </member>
+        <member name="T:Ogama.NetWork.Installation.ModpackInstaller">
+            <summary>
+            整合包安装器实现
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.ModpackInstaller.#ctor(System.String,System.String,System.String)">
+            <summary>
+            初始化整合包安装器
+            </summary>
+            <param name="modpackPath">整合包文件路径</param>
+            <param name="installPath">安装路径</param>
+            <param name="gameVersion">游戏版本</param>
+        </member>
+        <member name="P:Ogama.NetWork.Installation.ModpackInstaller.Name">
+            <summary>
+            获取安装器名称
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Installation.ModpackInstaller.GameVersion">
+            <summary>
+            获取游戏版本
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Installation.ModpackInstaller.Progress">
+            <summary>
+            获取安装进度
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.ModpackInstaller.ValidateEnvironmentAsync">
+            <summary>
+            验证安装环境
+            </summary>
+            <returns>验证结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.ModpackInstaller.DownloadFilesAsync">
+            <summary>
+            下载所需文件
+            </summary>
+            <returns>下载结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.ModpackInstaller.InstallAsync">
+            <summary>
+            安装游戏
+            </summary>
+            <returns>安装结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.ModpackInstaller.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:Ogama.NetWork.Installation.VanillaInstaller">
+            <summary>
+            原版Minecraft游戏安装器实现
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.VanillaInstaller.#ctor(System.String,System.String)">
+            <summary>
+            初始化原版游戏安装器
+            </summary>
+            <param name="gameVersion">游戏版本</param>
+            <param name="installPath">安装路径</param>
+        </member>
+        <member name="P:Ogama.NetWork.Installation.VanillaInstaller.Name">
+            <summary>
+            获取安装器名称
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Installation.VanillaInstaller.GameVersion">
+            <summary>
+            获取游戏版本
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Installation.VanillaInstaller.Progress">
+            <summary>
+            获取安装进度
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.VanillaInstaller.ValidateEnvironmentAsync">
+            <summary>
+            验证安装环境
+            </summary>
+            <returns>验证结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.VanillaInstaller.DownloadFilesAsync">
+            <summary>
+            下载所需文件
+            </summary>
+            <returns>下载结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.VanillaInstaller.InstallAsync">
+            <summary>
+            安装游戏
+            </summary>
+            <returns>安装结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Installation.VanillaInstaller.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:Ogama.NetWork.Network.INetworkManager">
+            <summary>
+            定义P2P网络管理的基础接口
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Network.INetworkManager.Status">
+            <summary>
+            获取网络状态
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Network.INetworkManager.LocalNodeId">
+            <summary>
+            获取本地节点ID
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Network.INetworkManager.Latency">
+            <summary>
+            获取网络延迟（毫秒）
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Network.INetworkManager.InitializeAsync">
+            <summary>
+            初始化网络
+            </summary>
+            <returns>初始化结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Network.INetworkManager.JoinAsync(System.String)">
+            <summary>
+            加入网络
+            </summary>
+            <param name="networkId">网络ID</param>
+            <returns>加入结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Network.INetworkManager.LeaveAsync">
+            <summary>
+            离开网络
+            </summary>
+            <returns>离开结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Network.INetworkManager.SendAsync(System.Byte[],System.String)">
+            <summary>
+            发送数据
+            </summary>
+            <param name="data">数据内容</param>
+            <param name="targetNodeId">目标节点ID</param>
+            <returns>发送结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Network.INetworkManager.BroadcastAsync(System.Byte[])">
+            <summary>
+            广播数据
+            </summary>
+            <param name="data">数据内容</param>
+            <returns>广播结果</returns>
+        </member>
+        <member name="T:Ogama.NetWork.Network.NetworkStatus">
+            <summary>
+            网络状态枚举
+            </summary>
+        </member>
+        <member name="F:Ogama.NetWork.Network.NetworkStatus.Uninitialized">
+            <summary>
+            未初始化
+            </summary>
+        </member>
+        <member name="F:Ogama.NetWork.Network.NetworkStatus.Initialized">
+            <summary>
+            已初始化
+            </summary>
+        </member>
+        <member name="F:Ogama.NetWork.Network.NetworkStatus.Connected">
+            <summary>
+            已连接
+            </summary>
+        </member>
+        <member name="F:Ogama.NetWork.Network.NetworkStatus.Disconnected">
+            <summary>
+            已断开
+            </summary>
+        </member>
+        <member name="F:Ogama.NetWork.Network.NetworkStatus.Error">
+            <summary>
+            错误
+            </summary>
+        </member>
+        <member name="T:Ogama.NetWork.Network.NetworkResult">
+            <summary>
+            网络操作结果类
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Network.NetworkResult.IsSuccess">
+            <summary>
+            获取或设置是否成功
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Network.NetworkResult.ErrorMessage">
+            <summary>
+            获取或设置错误信息
+            </summary>
+        </member>
+        <member name="T:Ogama.NetWork.Network.NetworkManager">
+            <summary>
+            网络管理器实现
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Network.NetworkManager.Status">
+            <summary>
+            获取网络状态
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Network.NetworkManager.LocalNodeId">
+            <summary>
+            获取本地节点ID
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Network.NetworkManager.Latency">
+            <summary>
+            获取网络延迟
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Network.NetworkManager.#ctor(System.String,System.String)">
+            <summary>
+            初始化网络管理器
+            </summary>
+            <param name="zerotierPath">Zerotier可执行文件路径</param>
+            <param name="networkId">Zerotier网络ID</param>
+        </member>
+        <member name="P:Ogama.NetWork.Network.NetworkManager.IsConnected">
+            <summary>
+            获取网络状态
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Network.NetworkManager.NetworkAddress">
+            <summary>
+            获取网络地址
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Network.NetworkManager.InitializeAsync">
+            <summary>
+            连接到网络
+            </summary>
+            <returns>连接结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Network.NetworkManager.JoinAsync(System.String)">
+            <summary>
+            加入指定网络
+            </summary>
+            <param name="networkId">网络ID</param>
+            <returns>加入结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Network.NetworkManager.DisconnectAsync">
+            <summary>
+            断开网络连接
+            </summary>
+            <returns>断开结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Network.NetworkManager.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Network.NetworkManager.SendAsync(System.Byte[],System.String)">
+            <summary>
+            发送数据到指定节点
+            </summary>
+            <param name="data">要发送的数据</param>
+            <param name="targetNodeId">目标节点ID</param>
+            <returns>发送结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Network.NetworkManager.BroadcastAsync(System.Byte[])">
+            <summary>
+            广播数据到所有节点
+            </summary>
+            <param name="data">要广播的数据</param>
+            <returns>广播结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Network.NetworkManager.LeaveAsync">
+            <summary>
+            离开当前网络
+            </summary>
+            <returns>离开结果</returns>
+        </member>
+        <member name="P:Ogama.NetWork.Network.NetworkManager.IsSuccess">
+            <summary>
+            获取或设置是否成功
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Network.NetworkManager.ErrorMessage">
+            <summary>
+            获取或设置错误信息
+            </summary>
+        </member>
+        <member name="T:Ogama.NetWork.Runtime.GameLogger">
+            <summary>
+            游戏日志收集器
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Runtime.GameLogger.#ctor(System.String,System.String)">
+            <summary>
+            初始化日志收集器
+            </summary>
+            <param name="logDirectory">日志目录</param>
+            <param name="gameVersion">游戏版本</param>
+        </member>
+        <member name="M:Ogama.NetWork.Runtime.GameLogger.StartLogging">
+            <summary>
+            开始记录日志
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Runtime.GameLogger.LogAsync(System.String,Ogama.NetWork.Runtime.LogLevel)">
+            <summary>
+            记录日志
+            </summary>
+            <param name="message">日志消息</param>
+            <param name="level">日志级别</param>
+        </member>
+        <member name="M:Ogama.NetWork.Runtime.GameLogger.AnalyzeCrash">
+            <summary>
+            分析崩溃日志
+            </summary>
+            <returns>崩溃分析结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Runtime.GameLogger.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:Ogama.NetWork.Runtime.LogLevel">
+            <summary>
+            日志级别枚举
+            </summary>
+        </member>
+        <member name="F:Ogama.NetWork.Runtime.LogLevel.Debug">
+            <summary>
+            调试信息
+            </summary>
+        </member>
+        <member name="F:Ogama.NetWork.Runtime.LogLevel.Info">
+            <summary>
+            一般信息
+            </summary>
+        </member>
+        <member name="F:Ogama.NetWork.Runtime.LogLevel.Warning">
+            <summary>
+            警告信息
+            </summary>
+        </member>
+        <member name="F:Ogama.NetWork.Runtime.LogLevel.Error">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="T:Ogama.NetWork.Runtime.CrashType">
+            <summary>
+            崩溃类型枚举
+            </summary>
+        </member>
+        <member name="F:Ogama.NetWork.Runtime.CrashType.OutOfMemory">
+            <summary>
+            内存不足
+            </summary>
+        </member>
+        <member name="F:Ogama.NetWork.Runtime.CrashType.MissingClass">
+            <summary>
+            缺少类
+            </summary>
+        </member>
+        <member name="F:Ogama.NetWork.Runtime.CrashType.MissingDependency">
+            <summary>
+            缺少依赖
+            </summary>
+        </member>
+        <member name="F:Ogama.NetWork.Runtime.CrashType.Unknown">
+            <summary>
+            未知错误
+            </summary>
+        </member>
+        <member name="T:Ogama.NetWork.Runtime.CrashAnalysisResult">
+            <summary>
+            崩溃分析结果类
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Runtime.CrashAnalysisResult.CrashType">
+            <summary>
+            获取或设置崩溃类型
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Runtime.CrashAnalysisResult.Description">
+            <summary>
+            获取或设置崩溃描述
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Runtime.CrashAnalysisResult.Solution">
+            <summary>
+            获取或设置解决方案
+            </summary>
+        </member>
+        <member name="T:Ogama.NetWork.Runtime.GameProcess">
+            <summary>
+            Minecraft游戏进程管理实现
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Runtime.GameProcess.#ctor(System.String,System.String,System.String[])">
+            <summary>
+            初始化游戏进程管理器
+            </summary>
+            <param name="javaPath">Java可执行文件路径</param>
+            <param name="workingDirectory">游戏工作目录</param>
+            <param name="arguments">启动参数</param>
+        </member>
+        <member name="P:Ogama.NetWork.Runtime.GameProcess.ProcessId">
+            <summary>
+            获取游戏进程ID
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Runtime.GameProcess.WorkingDirectory">
+            <summary>
+            获取游戏工作目录
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Runtime.GameProcess.IsRunning">
+            <summary>
+            获取游戏是否正在运行
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Runtime.GameProcess.MemoryUsage">
+            <summary>
+            获取游戏内存使用量（MB）
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Runtime.GameProcess.StartAsync">
+            <summary>
+            启动游戏
+            </summary>
+            <returns>启动结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Runtime.GameProcess.StopAsync">
+            <summary>
+            停止游戏
+            </summary>
+            <returns>停止结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Runtime.GameProcess.RestartAsync">
+            <summary>
+            重启游戏
+            </summary>
+            <returns>重启结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Runtime.GameProcess.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:Ogama.NetWork.Runtime.IGameProcess">
+            <summary>
+            定义Minecraft游戏进程管理的基础接口
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Runtime.IGameProcess.ProcessId">
+            <summary>
+            获取游戏进程ID
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Runtime.IGameProcess.WorkingDirectory">
+            <summary>
+            获取游戏工作目录
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Runtime.IGameProcess.IsRunning">
+            <summary>
+            获取游戏是否正在运行
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Runtime.IGameProcess.MemoryUsage">
+            <summary>
+            获取游戏内存使用量（MB）
+            </summary>
+        </member>
+        <member name="M:Ogama.NetWork.Runtime.IGameProcess.StartAsync">
+            <summary>
+            启动游戏
+            </summary>
+            <returns>启动结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Runtime.IGameProcess.StopAsync">
+            <summary>
+            停止游戏
+            </summary>
+            <returns>停止结果</returns>
+        </member>
+        <member name="M:Ogama.NetWork.Runtime.IGameProcess.RestartAsync">
+            <summary>
+            重启游戏
+            </summary>
+            <returns>重启结果</returns>
+        </member>
+        <member name="T:Ogama.NetWork.Runtime.GameProcessResult">
+            <summary>
+            游戏进程操作结果类
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Runtime.GameProcessResult.IsSuccess">
+            <summary>
+            获取或设置是否成功
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Runtime.GameProcessResult.ErrorMessage">
+            <summary>
+            获取或设置错误信息
+            </summary>
+        </member>
+        <member name="P:Ogama.NetWork.Runtime.GameProcessResult.ExitCode">
+            <summary>
+            获取或设置退出代码
+            </summary>
+        </member>
+    </members>
+</doc>
