@@ -14,6 +14,13 @@ namespace Ogama.NetWork.Network
         private readonly string _zerotierPath;
         private readonly string _networkId;
         private Process? _zerotierProcess;
+        private NetworkStatus _status = NetworkStatus.Uninitialized;
+        private string? _localNodeId;
+        private int _latency;
+
+        public NetworkStatus Status => _status;
+        public string LocalNodeId => _localNodeId ?? string.Empty;
+        public int Latency => _latency;
 
         /// <summary>
         /// 初始化网络管理器
@@ -40,7 +47,25 @@ namespace Ogama.NetWork.Network
         /// 连接到网络
         /// </summary>
         /// <returns>连接结果</returns>
-        public async Task<NetworkResult> ConnectAsync()
+        public async Task<NetworkResult> InitializeAsync()
+        {
+            try
+            {
+                _status = NetworkStatus.Initialized;
+                return new NetworkResult { IsSuccess = true };
+            }
+            catch (Exception ex)
+            {
+                _status = NetworkStatus.Error;
+                return new NetworkResult
+                {
+                    IsSuccess = false,
+                    ErrorMessage = $"初始化失败：{ex.Message}"
+                };
+            }
+        }
+
+        public async Task<NetworkResult> JoinAsync(string networkId)
         {
             try
             {
@@ -193,11 +218,40 @@ namespace Ogama.NetWork.Network
         }
     }
 
-    /// <summary>
-    /// 网络操作结果类
-    /// </summary>
-    public class NetworkResult
+    public async Task<NetworkResult> SendAsync(byte[] data, string targetNodeId)
     {
+        if (_status != NetworkStatus.Connected)
+        {
+            return new NetworkResult
+            {
+                IsSuccess = false,
+                ErrorMessage = "未连接到网络"
+            };
+        }
+
+        // TODO: 实现P2P数据发送逻辑
+        return new NetworkResult { IsSuccess = true };
+    }
+
+    public async Task<NetworkResult> BroadcastAsync(byte[] data)
+    {
+        if (_status != NetworkStatus.Connected)
+        {
+            return new NetworkResult
+            {
+                IsSuccess = false,
+                ErrorMessage = "未连接到网络"
+            };
+        }
+
+        // TODO: 实现P2P广播逻辑
+        return new NetworkResult { IsSuccess = true };
+    }
+
+    public async Task<NetworkResult> LeaveAsync()
+    {
+        return await DisconnectAsync();
+    }
         /// <summary>
         /// 获取或设置是否成功
         /// </summary>
